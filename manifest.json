@@ -1,0 +1,12 @@
+{
+  "manifest_version": 3,
+  "version": "0.0.1",
+  "name": "Saularis Newtab",
+  "chrome_url_overrides": {
+    "newtab": "./src/newtab.html"
+  },
+  "permissions": [
+    "tabs",
+    "storage"
+  ]
+}
