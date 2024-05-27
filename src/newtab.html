@@ -3,20 +3,38 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>New Tab</title>
     <link rel="stylesheet" href="./css/app.out.css" />
   </head>
-  <body>
+  <body class="bg-gray-900">
     <div class="container mx-auto mt-10">
-      <div class="flex justify-between">
+      <div class="flex justify-between p-5 text-white rounded-lg shadow-xl bg-gradient-to-r from-cyan-500 to-blue-500">
         <h3 class="text-3xl" id="time"></h3>
         <h3 class="text-3xl" id="date"></h3>
       </div>
-      <div class="flex gap-2 text-lg mt-5 uppercase font-semibold">
-        <div class="border px-2 rounded hover:bg-slate-700 hover:text-white cursor-pointer">Overview</div>
-        <div class="border px-2 rounded hover:bg-slate-700 hover:text-white cursor-pointer">Work</div>
-        <div class="border px-2 rounded hover:bg-slate-700 hover:text-white cursor-pointer">Personal</div>
-        <div class="border px-2 rounded hover:bg-slate-700 hover:text-white cursor-pointer">Settings</div>
+      <div class="mt-10">
+        <span class="inline-flex items-center gap-x-1.5 rounded-full px-2 py-1 text-xs font-medium text-gray-200 ring-1 ring-inset ring-gray-200">
+          <svg class="h-1.5 w-1.5 fill-red-500" viewBox="0 0 6 6" aria-hidden="true">
+            <circle cx="3" cy="3" r="3" />
+          </svg>
+          Memory: <span id="memory"></span>
+        </span>
+      </div>
+      <div class="mt-10">
+        <table class="min-w-full text-center divide-y divide-gray-700" id="cpuTable">
+          <thead>
+            <tr>
+              <th scope="col" class="px-3 py-3.5 text-sm font-semibold text-white">Core</th>
+              <th scope="col" class="px-3 py-3.5 text-sm font-semibold text-white">Idle Time</th>
+              <th scope="col" class="px-3 py-3.5 text-sm font-semibold text-white">Kernel Time</th>
+              <th scope="col" class="px-3 py-3.5 text-sm font-semibold text-white">User Time</th>
+              <th scope="col" class="px-3 py-3.5 text-sm font-semibold text-white">Total Time</th>
+              <th scope="col" class="px-3 py-3.5 text-sm font-semibold text-white">Usage (%)</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-800">
+          </tbody>
+        </table>
       </div>
     </div>
     <script src="./js/general.js"></script>
